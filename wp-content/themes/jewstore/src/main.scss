@@ -1,0 +1,15 @@
+/*!
+Theme Name: JewStore
+Theme URI: https://avzpro.com.ua
+Author: Alex Zhadan
+Author URI: http://avzpro.com.ua
+Description: Theme for shops
+Version: 1.0.0
+Requires PHP: 7.4
+*/
+
+@import "./scss/variables";
+@import "./scss/common";
+
+// Elements
+@import "./scss/header";

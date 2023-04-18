@@ -1,0 +1,148 @@
+/*!***************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[0].use[1]!./node_modules/sass-loader/dist/cjs.js!./wp-content/themes/jewstore/src/main.scss ***!
+  \***************************************************************************************************************************************************************/
+@import url(https://fonts.googleapis.com/css2?family=Lora&family=Marcellus&display=swap);
+/*!*******************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[0].use[1]!./node_modules/sass-loader/dist/cjs.js!./wp-content/themes/jewstore/src/main.scss (1) ***!
+  \*******************************************************************************************************************************************************************/
+/*!
+Theme Name: JewStore
+Theme URI: https://avzpro.com.ua
+Author: Alex Zhadan
+Author URI: http://avzpro.com.ua
+Description: Theme for shops
+Version: 1.0.0
+Requires PHP: 7.4
+*/
+*, *::after {
+  box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: "Lora", serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 25px;
+  color: #777777; }
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+  font-family: "Marcellus", Arial;
+  font-weight: 400;
+  color: #242424; }
+
+.mb-100 {
+  margin-bottom: 100px; }
+
+.mt-100 {
+  margin-top: 100px; }
+
+.container {
+  width: 100%;
+  max-width: 1170px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px; }
+  @media (min-width: 1200px) {
+    .container {
+      padding-left: 0;
+      padding-right: 0; } }
+
+header {
+  background-color: #040404;
+  color: #FFFFFF; }
+
+body {
+  position: relative; }
+
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px; }
+  .site-header__right {
+    display: flex;
+    justify-content: end;
+    align-items: center; }
+  @media (min-width: 1200px) {
+    .site-header {
+      height: 80px; } }
+
+.header-menu.show {
+  transform: scaleY(1);
+  transition: transform .3s; }
+
+.header-menu > .menu > ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none; }
+  .header-menu > .menu > ul > a:before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    height: 1px;
+    transition: all 0.3s ease-in-out; }
+  @media (min-width: 1200px) {
+    .header-menu > .menu > ul > a:hover:before {
+      background-color: #FFFFFF;
+      width: 100%;
+      left: 0; } }
+  .header-menu > .menu > ul a {
+    font-family: "Marcellus", Arial;
+    color: #FFFFFF;
+    font-size: 14px;
+    line-height: 16px;
+    text-decoration: none;
+    text-transform: uppercase; }
+    @media (min-width: 1200px) {
+      .header-menu > .menu > ul a {
+        margin-right: 30px; } }
+  .header-menu > .menu > ul > li {
+    display: inline-block;
+    position: relative; }
+
+@media (max-width: 1199px) {
+  .header-menu {
+    position: absolute;
+    top: 50px;
+    left: 0;
+    background-color: #040404;
+    display: block;
+    width: 100vw;
+    height: calc(100vh - 50px);
+    transform: scaleY(0);
+    transform-origin: 0 0; } }
+
+.menu-toggle {
+  width: 45px;
+  border: 2px solid #FFFFFF;
+  transition: background-color 0.3s ease-in-out;
+  background-color: transparent;
+  margin-left: 14px; }
+  .menu-toggle .bar1, .menu-toggle .bar2, .menu-toggle .bar3 {
+    width: 28px;
+    height: 4px;
+    background-color: #FFFFFF;
+    margin: 6px 0;
+    transition: 0.4s; }
+  .menu-toggle.touch {
+    background-color: #FFFFFF; }
+    .menu-toggle.touch .bar1, .menu-toggle.touch .bar2, .menu-toggle.touch .bar3 {
+      background-color: #040404; }
+    .menu-toggle.touch .bar1 {
+      -webkit-transform: rotate(-45deg) translate(-8px, 6px);
+      transform: rotate(-45deg) translate(-8px, 6px);
+      margin: 6.2px 0;
+      width: 31px; }
+    .menu-toggle.touch .bar2 {
+      opacity: 0; }
+    .menu-toggle.touch .bar3 {
+      -webkit-transform: rotate(45deg) translate(-8px, -8px);
+      transform: rotate(45deg) translate(-9px, -7px);
+      margin: 6.2px 0;
+      width: 31px; }
+  @media (min-width: 1200px) {
+    .menu-toggle {
+      display: none; } }
+
