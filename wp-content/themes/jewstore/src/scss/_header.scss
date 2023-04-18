@@ -1,0 +1,133 @@
+header {
+  background-color: $black-2;
+  color: $white;
+}
+
+body {
+  position: relative;
+}
+
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
+
+  &__right {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+  }
+
+  @media (min-width: $xl) {
+    height: 80px;
+  }
+}
+
+.header-menu {
+  &.show {
+    transform: scaleY(1);
+    transition: transform .3s;
+  }
+
+  & > .menu > ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+
+    & > a {
+      &:before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        height: 1px;
+        transition: all 0.3s ease-in-out;
+      }
+
+      &:hover:before {
+        @media (min-width: $xl) {
+          background-color: $white;
+          width: 100%;
+          left: 0;
+        }
+      }
+    }
+
+    a {
+      font-family: $second-font;
+      color: $white;
+      font-size: 14px;
+      line-height: 16px;
+      text-decoration: none;
+      text-transform: uppercase;
+
+      @media (min-width: $xl) {
+        margin-right: 30px;
+      }
+    }
+
+    & > li {
+      display: inline-block;
+      position: relative;
+    }
+  }
+
+  @media (max-width: $before-xl) {
+    position: absolute;
+    top: 50px;
+    left: 0;
+    background-color: $black-2;
+    display: block;
+    width: 100vw;
+    height: calc(100vh - 50px);
+    transform: scaleY(0);
+    transform-origin: 0 0;
+  }
+}
+
+.menu-toggle {
+  width: 45px;
+  border: 2px solid $white;
+  transition: background-color 0.3s ease-in-out;
+  background-color: transparent;
+  margin-left: 14px;
+
+  .bar1, .bar2, .bar3 {
+    width: 28px;
+    height: 4px;
+    background-color: $white;
+    margin: 6px 0;
+    transition: 0.4s;
+  }
+
+  &.touch {
+    background-color: $white;
+
+    .bar1, .bar2, .bar3 {
+      background-color: $black-2;
+    }
+
+    .bar1 {
+      -webkit-transform: rotate(-45deg) translate(-8px, 6px);
+      transform: rotate(-45deg) translate(-8px, 6px);
+      margin: 6.2px 0;
+      width: 31px;
+    }
+
+    .bar2 {
+      opacity: 0;
+    }
+
+    .bar3 {
+      -webkit-transform: rotate(45deg) translate(-8px, -8px);
+      transform: rotate(45deg) translate(-9px, -7px);
+      margin: 6.2px 0;
+      width: 31px;
+    }
+  }
+
+  @media (min-width: $xl) {
+    display: none;
+  }
+}
