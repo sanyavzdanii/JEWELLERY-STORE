@@ -17,6 +17,20 @@ body {
     display: flex;
     justify-content: end;
     align-items: center;
+
+    .login {
+      margin-right: 23px;
+    }
+  }
+
+  &__left {
+    display: flex;
+    align-items: center;
+
+    img {
+      width: auto;
+      height: 40px;
+    }
   }
 
   @media (min-width: $xl) {
@@ -30,46 +44,19 @@ body {
     transition: transform .3s;
   }
 
-  & > .menu > ul {
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
+  & > .menu {
+    display: inline-block;
 
-    & > a {
-      &:before {
-        content: '';
-        position: absolute;
-        bottom: 0;
-        left: 50%;
-        height: 1px;
-        transition: all 0.3s ease-in-out;
-      }
+    & > ul {
+      margin: 0;
+      padding: 0;
+      list-style-type: none;
 
-      &:hover:before {
+      & > li {
         @media (min-width: $xl) {
-          background-color: $white;
-          width: 100%;
-          left: 0;
+          margin-right: 30px;
         }
       }
-    }
-
-    a {
-      font-family: $second-font;
-      color: $white;
-      font-size: 14px;
-      line-height: 16px;
-      text-decoration: none;
-      text-transform: uppercase;
-
-      @media (min-width: $xl) {
-        margin-right: 30px;
-      }
-    }
-
-    & > li {
-      display: inline-block;
-      position: relative;
     }
   }
 
@@ -83,6 +70,38 @@ body {
     height: calc(100vh - 50px);
     transform: scaleY(0);
     transform-origin: 0 0;
+  }
+}
+
+.header-menu > .menu > ul > li, .lined-link {
+  display: inline-block;
+  position: relative;
+
+  & > a {
+    color: $white;
+    font-family: $second-font;
+    font-size: 14px;
+    line-height: 16px;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    &:before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      bottom: 0;
+      right: 0;
+      background-color: $white;
+      height: 1px;
+      opacity: 0;
+      transition: all 0.3s ease-in-out;
+    }
+
+    &:hover:before {
+      @media (min-width: $xl) {
+        opacity: 1;
+      }
+    }
   }
 }
 
@@ -129,5 +148,61 @@ body {
 
   @media (min-width: $xl) {
     display: none;
+  }
+}
+
+.search {
+  transition: all 0.4s ease-in-out;
+  &.open {
+    position: absolute;
+    left: 0;
+    width: 100%;
+
+
+    & > div {
+      width: 100%;
+      max-width: 472px;
+      margin-right: auto;
+      margin-left: auto;
+
+      @media (max-width: $before-xl) {
+        max-width: 220px;
+      }
+    }
+
+    .search__input {
+      width: calc(100% - 68px);
+      height: 24px;
+      margin-left: 16px;
+      margin-right: 16px;
+
+      &:after {
+        opacity: 1;
+      }
+    }
+  }
+
+  .svg-icon {
+    font-size: 24px;
+    color: $white;
+  }
+
+  &__btn.hide {
+    display: none;
+  }
+
+  &__input {
+    transition: all 0.3s ease-in-out;
+
+    &:after {
+      content: '';
+      position: absolute;
+      bottom: -6px;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background-color: $white;
+      opacity: 0;
+    }
   }
 }

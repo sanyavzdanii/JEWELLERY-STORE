@@ -37,7 +37,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _js_
   \***************************************************/
 /***/ (() => {
 
-eval("jQuery('.menu-toggle').on( 'click', function(){\r\n    const $this = jQuery(this);\r\n\r\n    $this.toggleClass('touch');\r\n    jQuery('.header-menu').toggleClass('show');\r\n});\n\n//# sourceURL=webpack:///./wp-content/themes/jewstore/src/js/main.js?");
+eval("jQuery('.menu-toggle').on( 'click', function(){\r\n    const $this = jQuery(this);\r\n\r\n    $this.toggleClass('touch');\r\n    jQuery('.header-menu').toggleClass('show');\r\n});\r\n\r\njQuery('.search__btn').on( 'click', function(){\r\n    jQuery('.search').toggleClass('open');\r\n    jQuery('.hide-when-search').toggleClass('hide');\r\n});\n\n//# sourceURL=webpack:///./wp-content/themes/jewstore/src/js/main.js?");
 
 /***/ })
 

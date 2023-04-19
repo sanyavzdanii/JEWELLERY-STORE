@@ -38,3 +38,38 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
     padding-right: 0;
   }
 }
+
+.d-flex {
+  display: flex;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+.ml-18 {
+  margin-left: 18px;
+}
+
+.hide {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.hide-when-search {
+  transition: all 0.3s ease-in-out;
+}
+
+.position-relative {
+  position: relative;
+}
+
+.svg-icon {
+  height: 1em;
+  width: 1em;
+  fill: currentColor;
+}
+
+.pointer {
+  cursor: pointer;
+}
