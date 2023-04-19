@@ -1,0 +1,71 @@
+.block-1 {
+  flex-wrap: wrap;
+  margin-bottom: 50px;
+
+  &__left {
+    width: 100%;
+    margin-bottom: 20px;
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+
+    @media (max-width: $before-xl) {
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    @media (min-width: $xl) {
+      flex-wrap: nowrap;
+      margin-bottom: 0;
+    }
+  }
+
+  &__right {
+    width: 100%;
+
+    @media (min-width: $xl) {
+      max-width: 470px;
+      margin-left: 76px;
+    }
+  }
+
+  @media (min-width: $xl) {
+    flex-wrap: nowrap;
+    margin-bottom: 100px;
+  }
+}
+
+.zhadan-alex-testovoye {
+  font-style: italic;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 25px;
+  color: $gold;
+  margin-bottom: 10px;
+}
+
+.zhadan-alex-testovoye-1 {
+  font-family: $first-font;
+  font-size: 62px;
+  line-height: 75px;
+  color: $dark;
+  margin-bottom: 10px;
+
+  &--small {
+    font-size: 45px;
+    line-height: 55px;
+  }
+}
+
+.zhadan-alex-testovoye-2 {
+  font-size: 14px;
+  line-height: 25px;
+  color: $dark-light;
+  margin-bottom: 20px;
+
+  @media (min-width: $xl) {
+    margin-bottom: 30px;
+  }
+}

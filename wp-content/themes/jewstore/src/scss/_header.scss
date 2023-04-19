@@ -12,6 +12,7 @@ body {
   justify-content: space-between;
   align-items: center;
   height: 50px;
+  overflow: hidden;
 
   &__right {
     display: flex;
@@ -19,7 +20,11 @@ body {
     align-items: center;
 
     .login {
-      margin-right: 23px;
+      margin-right: 16px;
+
+      @media (min-width: $xl) {
+        margin-right: 23px;
+      }
     }
   }
 
@@ -29,7 +34,11 @@ body {
 
     img {
       width: auto;
-      height: 40px;
+      height: 32px;
+
+      @media (min-width: $xl) {
+        height: 40px;
+      }
     }
   }
 
@@ -53,10 +62,24 @@ body {
       list-style-type: none;
 
       & > li {
+        @media (max-width: $before-xl) {
+          display: block;
+          width: 100%;
+          padding: 18px 15px;
+          text-align: center;
+        }
+
         @media (min-width: $xl) {
           margin-right: 30px;
         }
       }
+    }
+
+    @media (max-width: $before-xl) {
+      display: block;
+      height: calc(100vh - 100px);
+      overflow: auto;
+      margin-top: 18px;
     }
   }
 
@@ -106,8 +129,8 @@ body {
 }
 
 .menu-toggle {
-  width: 45px;
-  border: 2px solid $white;
+  width: 42px;
+  border: 0 solid $white;
   transition: background-color 0.3s ease-in-out;
   background-color: transparent;
   margin-left: 14px;
@@ -151,8 +174,9 @@ body {
   }
 }
 
-.search {
+.search-form {
   transition: all 0.4s ease-in-out;
+
   &.open {
     position: absolute;
     left: 0;
@@ -166,15 +190,19 @@ body {
       margin-left: auto;
 
       @media (max-width: $before-xl) {
-        max-width: 220px;
+        max-width: 200px;
       }
     }
 
-    .search__input {
-      width: calc(100% - 68px);
+    .search-form__input {
+      width: calc(100% - 44px);
       height: 24px;
-      margin-left: 16px;
       margin-right: 16px;
+
+      input {
+        width: 100%;
+        margin-left: 16px;
+      }
 
       &:after {
         opacity: 1;
@@ -185,6 +213,11 @@ body {
   .svg-icon {
     font-size: 24px;
     color: $white;
+    transition: color 0.3s ease-in-out;
+
+    &:hover {
+      color: $gold;
+    }
   }
 
   &__btn.hide {
@@ -192,7 +225,21 @@ body {
   }
 
   &__input {
+    width: 0;
     transition: all 0.3s ease-in-out;
+
+    input {
+      background-color: transparent;
+      outline: unset;
+      color: $white;
+      border: 0;
+      font-size: 14px;
+      line-height: 16px;
+
+      &::placeholder {
+        color: rgba(255, 255, 255, 0.4);
+      }
+    }
 
     &:after {
       content: '';
@@ -204,5 +251,88 @@ body {
       background-color: $white;
       opacity: 0;
     }
+  }
+}
+
+#searchsubmit {
+  display: none;
+}
+
+.cart-btn {
+  font-size: 24px;
+  transition: color 0.3s ease-in-out;
+  color: $white;
+
+  &:hover {
+    color: $gold;
+  }
+}
+
+.cart-counter {
+  position: absolute;
+  top: 0;
+  right: 2px;
+  margin-top: -1px;
+  font-weight: 500;
+  font-size: 10px;
+  line-height: 13px;
+  color: $white;
+}
+
+.cart-price {
+  display: none;
+  margin-left: 2px;
+  font-family: $second-font;
+  font-size: 14px;
+  line-height: 16px;
+
+  @media (min-width: $xl) {
+    display: block;
+  }
+}
+
+// Front slider
+
+.front-slider {
+  height: calc(100vh - 50px);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-bottom: 50px;
+
+  &__text {
+    width: 100%;
+    max-width: 470px;
+    color: $white;
+
+    .text-1 {
+      font-size: 22px;
+      line-height: 25px;
+      font-style: italic;
+      margin: 0 0 10px 0;
+    }
+
+    .text-2 {
+      font-family: $second-font;
+      font-size: 54px;
+      line-height: 60px;
+      color: $white;
+      margin: 0 0 20px 0;
+    }
+
+    .text-3 {
+      font-size: 14px;
+      line-height: 25px;
+      margin: 0 0 35px 0;
+    }
+  }
+
+  @media (min-width: $xl) {
+    height: 670px;
+    margin-bottom: 100px;
+  }
+
+  @media (min-width: 1700px) {
+    background-size: contain;
   }
 }

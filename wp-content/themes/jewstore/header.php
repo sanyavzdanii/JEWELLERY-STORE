@@ -9,6 +9,7 @@
  * @package NewBarberry
  */
 
+  global $woocommerce;
 ?>
 <!doctype html>
 <html <?php language_attributes(); ?>>
@@ -16,7 +17,6 @@
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="https://gmpg.org/xfn/11">
-	<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo('template_url'); ?>/style.css" />
     <?php wp_enqueue_script("jquery"); ?>
 	<?php wp_head(); ?>
 </head>
@@ -52,25 +52,42 @@
                         <a href="#">Login / Register</a>
                     </div>
                     <div class="d-flex align-items-center">
-                        <div class="search">
+                        <div class="search-form">
                             <div class="d-flex align-items-center position-relative">
-                                <svg class="svg-icon hide-when-search hide">
+                                <div class="search-form__input hide-when-search hide">
+                                    <?php get_search_form(); ?>
+                                </div>
+                                <svg class="search-form__btn svg-icon hide-when-search pointer">
                                     <?php echo '<use xlink:href="' . get_stylesheet_directory_uri() . '/assets/sprite.svg#search-icon"/>'; ?>
                                 </svg>
-                                <div class="search__input hide-when-search hide"></div>
-                                <svg class="search__btn svg-icon hide-when-search pointer">
-                                    <?php echo '<use xlink:href="' . get_stylesheet_directory_uri() . '/assets/sprite.svg#search-icon"/>'; ?>
-                                </svg>
-                                <svg class="search__btn svg-icon hide-when-search hide pointer">
+                                <svg class="search-form__btn svg-icon hide-when-search hide pointer">
                                     <?php echo '<use xlink:href="' . get_stylesheet_directory_uri() . '/assets/sprite.svg#close-icon"/>'; ?>
                                 </svg>
                             </div>
                         </div>
-                        <div class="hide-when-search ml-18">
-                            cart
+                        <div class="hide-when-search ml-18 pointer position-relative">
+                            <a href="<?php echo $woocommerce->cart->get_cart_url() ?>" class="d-flex align-items-center">
+                                <svg class="cart-btn svg-icon">
+                                    <?php echo '<use xlink:href="' . get_stylesheet_directory_uri() . '/assets/sprite.svg#cart-icon"/>'; ?>
+                                </svg>
+                                <span class="cart-counter">
+                                    <?php
+                                        $count = intval($woocommerce->cart->cart_contents_count);
+
+                                        if($count > 9) {
+                                            echo '∞';
+                                        } else if($count == 0) {
+                                            echo '0';
+                                        } else {
+                                            echo $count;
+                                        }
+                                    ?>
+                                </span>
+                            </a>
                         </div>
+                        <div class="cart-price hide-when-search">$0.00</div>
                     </div>
-                    <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
+                    <button class="menu-toggle hide-when-search" aria-controls="primary-menu" aria-expanded="false">
                         <div class="bar1"></div>
                         <div class="bar2"></div>
                         <div class="bar3"></div>
