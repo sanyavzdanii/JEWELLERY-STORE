@@ -47,7 +47,7 @@
 }
 
 .zhadan-alex-testovoye-1 {
-  font-family: $first-font;
+  font-family: $second-font;
   font-size: 62px;
   line-height: 75px;
   color: $dark;
@@ -68,4 +68,12 @@
   @media (min-width: $xl) {
     margin-bottom: 30px;
   }
+}
+
+.zhadan-alex-testovoye-3 {
+  font-family: $second-font;
+  font-size: 30px;
+  line-height: 40px;
+  color: $dark;
+  margin-bottom: 10px;
 }

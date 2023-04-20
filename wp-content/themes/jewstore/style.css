@@ -57,6 +57,12 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 .ml-18 {
   margin-left: 18px; }
 
+.mb-50 {
+  margin-bottom: 50px !important; }
+
+.mb-30 {
+  margin-bottom: 30px !important; }
+
 .hide {
   opacity: 0;
   visibility: hidden; }
@@ -130,6 +136,13 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 
 .text-center {
   text-align: center; }
+
+.fake-link {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%; }
 
 header {
   background-color: #040404;
@@ -413,7 +426,7 @@ body {
   margin-bottom: 10px; }
 
 .zhadan-alex-testovoye-1 {
-  font-family: "Lora", serif;
+  font-family: "Marcellus", Arial;
   font-size: 62px;
   line-height: 75px;
   color: #242424;
@@ -430,4 +443,66 @@ body {
   @media (min-width: 1200px) {
     .zhadan-alex-testovoye-2 {
       margin-bottom: 30px; } }
+
+.zhadan-alex-testovoye-3 {
+  font-family: "Marcellus", Arial;
+  font-size: 30px;
+  line-height: 40px;
+  color: #242424;
+  margin-bottom: 10px; }
+
+.block-2 {
+  margin-bottom: 50px; }
+  .block-2__left {
+    width: 100%;
+    height: 370px;
+    max-width: 270px;
+    overflow: hidden; }
+    .block-2__left:hover img {
+      transform: scale(1.1);
+      margin-top: -12px; }
+    .block-2__left:hover .banner-text {
+      margin-top: -40px; }
+    .block-2__left img {
+      height: 100%;
+      width: auto;
+      object-fit: cover;
+      transition: 0.28s; }
+  .block-2__right {
+    width: 100%;
+    margin-left: 30px; }
+  @media (min-width: 1200px) {
+    .block-2 {
+      margin-bottom: 100px; } }
+
+.banner-text {
+  top: 0;
+  left: 0;
+  width: 100%;
+  position: absolute;
+  height: 410px;
+  padding-left: 12px;
+  padding-right: 12px;
+  transition: 0.35s;
+  align-items: end;
+  justify-content: center; }
+  .banner-text__shop-now {
+    margin-top: 10px;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    color: #000000; }
+    .banner-text__shop-now.white {
+      color: #FFFFFF; }
+  .banner-text__regular-text {
+    font-size: 14px;
+    line-height: 25px;
+    color: #777777; }
+    .banner-text__regular-text.gray {
+      color: #DFDFDF; }
+  .banner-text__header-text {
+    font-size: 30px;
+    line-height: 35px;
+    color: #000000; }
+    .banner-text__header-text.white {
+      color: #FFFFFF; }
 
