@@ -27,7 +27,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extr
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _js_main_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./js/main.js */ \"./wp-content/themes/jewstore/src/js/main.js\");\n/* harmony import */ var _js_main_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_js_main_js__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _main_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./main.scss */ \"./wp-content/themes/jewstore/src/main.scss\");\n\r\n\n\n//# sourceURL=webpack:///./wp-content/themes/jewstore/src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _js_main__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./js/main */ \"./wp-content/themes/jewstore/src/js/main.js\");\n/* harmony import */ var _js_main__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_js_main__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _main_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./main.scss */ \"./wp-content/themes/jewstore/src/main.scss\");\n\r\n\n\n//# sourceURL=webpack:///./wp-content/themes/jewstore/src/index.js?");
 
 /***/ }),
 
@@ -37,7 +37,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _js_
   \***************************************************/
 /***/ (() => {
 
-eval("jQuery('.menu-toggle').on( 'click', function(){\r\n    const $this = jQuery(this);\r\n\r\n    $this.toggleClass('touch');\r\n    jQuery('.header-menu').toggleClass('show');\r\n});\r\n\r\njQuery('.search-form__btn').on( 'click', function(){\r\n    jQuery('.search-form').toggleClass('open');\r\n    jQuery('.hide-when-search').toggleClass('hide');\r\n});\n\n//# sourceURL=webpack:///./wp-content/themes/jewstore/src/js/main.js?");
+eval("jQuery('.menu-toggle').on( 'click', function(){\r\n    const $this = jQuery(this);\r\n\r\n    $this.toggleClass('touch');\r\n    jQuery('.header-menu').toggleClass('show');\r\n});\r\n\r\njQuery('.search-form__btn').on( 'click', function(){\r\n    jQuery('.search-form').toggleClass('open');\r\n    jQuery('.hide-when-search').toggleClass('hide');\r\n});\r\n\r\njQuery(document).ready(function(){\r\n    jQuery('.slider').slick({\r\n        infinite: false,\r\n        slidesToShow: 3,\r\n        slidesToScroll: 1,\r\n        prevArrow: '<div class=\"slider__prev d-flex\"><svg class=\"svg-icon\"><use xlink:href=\"./wp-content/themes/jewstore/assets/sprite.svg#prev-icon\" /></svg></div>',\r\n        nextArrow: '<div class=\"slider__next d-flex\"><svg class=\"svg-icon\"><use xlink:href=\"./wp-content/themes/jewstore/assets/sprite.svg#next-icon\" /></svg></div>',\r\n        responsive: [\r\n            {\r\n                breakpoint: 1199,\r\n                settings: {\r\n                    slidesToShow: 2,\r\n                    slidesToScroll: 1\r\n                }\r\n            },\r\n            {\r\n                breakpoint: 640,\r\n                settings: {\r\n                    slidesToShow: 1\r\n                }\r\n            }\r\n        ]\r\n    });\r\n});\n\n//# sourceURL=webpack:///./wp-content/themes/jewstore/src/js/main.js?");
 
 /***/ })
 

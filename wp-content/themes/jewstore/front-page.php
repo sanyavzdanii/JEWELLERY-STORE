@@ -155,45 +155,47 @@
             ?>
         </div>
         <div class="d-flex mb-30">
-            <div class="block-2__left position-relative">
-                <?php
-                    $imgBannerAlt = get_post_meta( get_the_ID(), 'Banner_1_img_alt' )[0];
-                    $imgBannerSrc = get_post_meta( get_the_ID(), 'Banner_1_img' )[0];
-    
-                    if( $imgBannerSrc != '' ) {
-                        echo '<img src="' . $imgBannerSrc . '" alt="' . $imgBannerAlt . '" width="624px" height="500px" />';
-                    } else {
-                        echo '<img src="' . get_stylesheet_directory_uri() . '/assets/banner-1.png" alt="' . $imgBannerAlt . '" width="270px" height="370px">';
-                    }
-                ?>
-                <div class="banner-text text-center d-flex">
-                    <div>
-                        <div class="banner-text__header-text">
-                            <?php
-                                $Banner1textHeader = get_post_meta( get_the_ID(), 'Banner_1_text_header' )[0];
+            <div class="block-2__left">
+                <div class="position-relative d-flex">
+                    <?php
+                        $imgBannerAlt = get_post_meta( get_the_ID(), 'Banner_1_img_alt' )[0];
+                        $imgBannerSrc = get_post_meta( get_the_ID(), 'Banner_1_img' )[0];
 
-                                if( $Banner1textHeader != '' ) {
-                                    echo $Banner1textHeader;
-                                } else {
-                                    echo 'TRISTIQUE JUSTO';
-                                }
-                            ?>
-                        </div>
-                        <div class="banner-text__regular-text">
-                            <?php
-                                $Banner1text = get_post_meta( get_the_ID(), 'Banner_1_text' )[0];
+                        if( $imgBannerSrc != '' ) {
+                            echo '<img src="' . $imgBannerSrc . '" alt="' . $imgBannerAlt . '" width="624px" height="500px" />';
+                        } else {
+                            echo '<img src="' . get_stylesheet_directory_uri() . '/assets/banner-1.png" alt="' . $imgBannerAlt . '" width="270px" height="370px">';
+                        }
+                    ?>
+                    <div class="banner-text text-center d-flex">
+                        <div>
+                            <div class="banner-text__header-text">
+                                <?php
+                                    $Banner1textHeader = get_post_meta( get_the_ID(), 'Banner_1_text_header' )[0];
 
-                                if( $Banner1text != '' ) {
-                                    echo $Banner1text;
-                                } else {
-                                    echo 'Started now shortly had for assured hearing expense led juvenile.';
-                                }
-                            ?>
+                                    if( $Banner1textHeader != '' ) {
+                                        echo $Banner1textHeader;
+                                    } else {
+                                        echo 'TRISTIQUE JUSTO';
+                                    }
+                                ?>
+                            </div>
+                            <div class="banner-text__regular-text">
+                                <?php
+                                    $Banner1text = get_post_meta( get_the_ID(), 'Banner_1_text' )[0];
+
+                                    if( $Banner1text != '' ) {
+                                        echo $Banner1text;
+                                    } else {
+                                        echo 'Started now shortly had for assured hearing expense led juvenile.';
+                                    }
+                                ?>
+                            </div>
+                            <div class="banner-text__shop-now">
+                                shop now
+                            </div>
+                            <a href="#" class="fake-link"></a>
                         </div>
-                        <div class="banner-text__shop-now">
-                            shop now
-                        </div>
-                        <a href="#" class="fake-link"></a>
                     </div>
                 </div>
             </div>
@@ -201,65 +203,91 @@
                 <div class="slider">
                     <?php
                         $allData = get_field( "featured_products" );
-                        $mas = get_field( "featured_products" )[0];
 
                         for($i = 0; $i < count($allData); $i++) {
                             $oneProduct = $allData[$i];
                             $wc_product = wc_get_product( $oneProduct->ID );
 
-                            echo '<div class="slider__item"><div class="product__name">' . $oneProduct->post_title . '</div>';
-                            echo '<div class="product__name">' . $wc_product->get_regular_price() . '</div>';
-                            echo '<div class="product__name">' . get_the_post_thumbnail($oneProduct->ID) . '</div></div>';
+                            echo '<div class="slider__item text-center product"><div class="product__img d-flex position-relative">'
+                            . $wc_product->get_image() . '<div class="product__modal"><div class="product__modal-inner"><a href="./?add-to-cart='
+                            . $oneProduct->ID . '"><svg class="add-to-cart svg-icon pointer"><use xlink:href="'
+                            . get_stylesheet_directory_uri() . '/assets/sprite.svg#cart-2-icon" /></svg></a><a href="'
+                            . $wc_product->get_permalink() . '"><svg class="search svg-icon pointer"><use xlink:href="'
+                            . get_stylesheet_directory_uri() . '/assets/sprite.svg#search-icon" /></svg></a></div></div></div>';
+                            echo '<div class="product__name">' . $oneProduct->post_title . '</div>';
+                            echo '<div class="product__category">' . $wc_product->get_categories() . '</div>';
+                            echo '<div class="product__price">' . $wc_product->get_price_html() . '</div></div>';
                         }
                     ?>
                 </div>
             </div>
         </div>
         <div class="d-flex">
-            <div class="block-2__left position-relative">
-                <?php
-                    $imgBanner2Alt = get_post_meta( get_the_ID(), 'Banner_2_img_alt' )[0];
-                    $imgBanner2Src = get_post_meta( get_the_ID(), 'Banner_2_img' )[0];
-    
-                    if( $imgBanner2Src != '' ) {
-                        echo '<img src="' . $imgBanner2Src . '" alt="' . $imgBanner2Alt . '" width="624px" height="500px" />';
-                    } else {
-                        echo '<img src="' . get_stylesheet_directory_uri() . '/assets/banner-2.png" alt="' . $imgBanner2Alt . '" width="270px" height="370px">';
-                    }
-                ?>
-                <div class="banner-text text-center d-flex">
-                    <div>
-                        <div class="banner-text__header-text white">
-                            <?php
-                                $Banner2textHeader = get_post_meta( get_the_ID(), 'Banner_2_text_header' )[0];
+            <div class="block-2__left">
+                <div class="position-relative d-flex">
+                    <?php
+                        $imgBanner2Alt = get_post_meta( get_the_ID(), 'Banner_2_img_alt' )[0];
+                        $imgBanner2Src = get_post_meta( get_the_ID(), 'Banner_2_img' )[0];
 
-                                if( $Banner2textHeader != '' ) {
-                                    echo $Banner2textHeader;
-                                } else {
-                                    echo 'TRISTIQUE JUSTO';
-                                }
-                            ?>
-                        </div>
-                        <div class="banner-text__regular-text gray">
-                            <?php
-                                $Banner2text = get_post_meta( get_the_ID(), 'Banner_2_text' )[0];
+                        if( $imgBanner2Src != '' ) {
+                            echo '<img src="' . $imgBanner2Src . '" alt="' . $imgBanner2Alt . '" width="624px" height="500px" />';
+                        } else {
+                            echo '<img src="' . get_stylesheet_directory_uri() . '/assets/banner-2.png" alt="' . $imgBanner2Alt . '" width="270px" height="370px">';
+                        }
+                    ?>
+                    <div class="banner-text text-center d-flex">
+                        <div>
+                            <div class="banner-text__header-text white">
+                                <?php
+                                    $Banner2textHeader = get_post_meta( get_the_ID(), 'Banner_2_text_header' )[0];
 
-                                if( $Banner2text != '' ) {
-                                    echo $Banner2text;
-                                } else {
-                                    echo 'Started now shortly had for assured hearing expense led juvenile.';
-                                }
-                            ?>
+                                    if( $Banner2textHeader != '' ) {
+                                        echo $Banner2textHeader;
+                                    } else {
+                                        echo 'TRISTIQUE JUSTO';
+                                    }
+                                ?>
+                            </div>
+                            <div class="banner-text__regular-text gray">
+                                <?php
+                                    $Banner2text = get_post_meta( get_the_ID(), 'Banner_2_text' )[0];
+
+                                    if( $Banner2text != '' ) {
+                                        echo $Banner2text;
+                                    } else {
+                                        echo 'Started now shortly had for assured hearing expense led juvenile.';
+                                    }
+                                ?>
+                            </div>
+                            <div class="banner-text__shop-now white">
+                                shop now
+                            </div>
+                            <a href="#" class="fake-link"></a>
                         </div>
-                        <div class="banner-text__shop-now white">
-                            shop now
-                        </div>
-                        <a href="#" class="fake-link"></a>
                     </div>
                 </div>
             </div>
             <div class="block-2__right">
-                slider
+                <div class="slider">
+                    <?php
+                        $allData2 = get_field( "featured_products_copy" );
+
+                        for($i = 0; $i < count($allData2); $i++) {
+                            $oneProduct2 = $allData2[$i];
+                            $wc_product2 = wc_get_product( $oneProduct2->ID );
+
+                            echo '<div class="slider__item text-center product"><div class="product__img d-flex position-relative">'
+                            . $wc_product2->get_image() . '<div class="product__modal"><div class="product__modal-inner"><a href="?add-to-cart='
+                            . $oneProduct2->ID . '"><svg class="add-to-cart svg-icon pointer"><use xlink:href="'
+                            . get_stylesheet_directory_uri() . '/assets/sprite.svg#cart-2-icon" /></svg></a><a href="'
+                            . $wc_product2->get_permalink() . '"><svg class="search svg-icon pointer"><use xlink:href="'
+                            . get_stylesheet_directory_uri() . '/assets/sprite.svg#search-icon" /></svg></a></div></div></div>';
+                            echo '<div class="product__name">' . $oneProduct2->post_title . '</div>';
+                            echo '<div class="product__category">' . $wc_product2->get_categories() . '</div>';
+                            echo '<div class="product__price">' . $wc_product2->get_price_html() . '</div></div>';
+                        }
+                    ?>
+                </div>
             </div>
         </div>
 	</section>

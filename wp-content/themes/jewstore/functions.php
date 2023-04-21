@@ -13,7 +13,13 @@ add_action( 'init', 'register_my_menus' );
 /**
  * Load jQuery.
  */
-wp_enqueue_script('jquery');
+
+function jwshop_load_scripts() {
+    wp_enqueue_script('slick', get_template_directory_uri() . '/assets/slick.min.js', array('jquery'), false, true);
+    wp_enqueue_script('scripts', get_template_directory_uri() . '/assets/scripts.js', array('jquery'), NULL, true);
+}
+
+add_action('wp_enqueue_scripts', 'jwshop_load_scripts', 10);
 
 /**
 * Enable custom logo support

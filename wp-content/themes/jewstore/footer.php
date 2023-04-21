@@ -15,6 +15,5 @@
 
 <?php wp_footer(); ?>
 
-<script src="<?php bloginfo('template_url'); ?>/assets/scripts.js"></script>
 </body>
 </html>
