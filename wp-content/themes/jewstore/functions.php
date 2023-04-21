@@ -530,6 +530,268 @@ function true_customizer_init( $wp_customize ) {
             'type'      => 'text'
         )
     );
+    
+    // Block 3
+        
+    $wp_customize->add_section(
+        'true_block_3_section',
+        array(
+            'title'       => 'Special offer',
+            'priority'    => 4,
+            'description' => 'Here you can customize the Special offer of your site.',
+            'panel'       => 'true_panel'
+        )
+    );
+
+    $wp_customize->add_setting(
+        'jw_special_offer_header_1',
+        array(
+            'default'    =>  'Special offer',
+            'transport'  =>  'postMessage'
+        )
+    );
+
+    $wp_customize->add_control(
+        'jw_special_offer_header_1',
+        array(
+            'section'   => 'true_block_3_section',
+            'label'     => 'Header 1',
+            'type'      => 'text'
+        )
+    );
+
+    $wp_customize->add_setting(
+        'jw_special_offer_header_2',
+        array(
+            'default'    =>  'JEWELLERY BOX',
+            'transport'  =>  'postMessage'
+        )
+    );
+
+    $wp_customize->add_control(
+        'jw_special_offer_header_2',
+        array(
+            'section'   => 'true_block_3_section',
+            'label'     => 'Header 2',
+            'type'      => 'text'
+        )
+    );
+
+    $wp_customize->add_setting(
+        'jw_special_offer_header_3',
+        array(
+            'default'    =>  'ALL IN ONE BOX',
+            'transport'  =>  'postMessage'
+        )
+    );
+
+    $wp_customize->add_control(
+        'jw_special_offer_header_3',
+        array(
+            'section'   => 'true_block_3_section',
+            'label'     => 'Header 2',
+            'type'      => 'text'
+        )
+    );
+
+    $wp_customize->add_setting(
+        'jw_special_offer_video_link',
+        array(
+            'default'    =>  'https://youtu.be/KotxCkZBQpQ',
+            'transport'  =>  'postMessage'
+        )
+    );
+
+    $wp_customize->add_control(
+        'jw_special_offer_video_link',
+        array(
+            'section'   => 'true_block_3_section',
+            'label'     => 'Link to video',
+            'type'      => 'text'
+        )
+    );
+
+    $wp_customize->add_setting(
+        'special_offer_img_alt',
+        array(
+            'default'    =>  '',
+            'transport'  =>  'postMessage'
+        )
+    );
+
+    $wp_customize->add_control(
+        'special_offer_img_alt',
+        array(
+            'section'   => 'true_block_3_section',
+            'label'     => 'Alt for image',
+            'type'      => 'text'
+        )
+    );
+
+    $wp_customize->add_setting(
+        'special_offer_img',
+        array(
+            'default'    =>  '/assets/discount.png',
+            'transport'  =>  'postMessage'
+        )
+    );
+
+    $wp_customize->add_control(
+        'special_offer_img',
+        array(
+            'section'   => 'true_block_3_section',
+            'label'     => 'Image URL',
+            'type'      => 'text'
+        )
+    );
+
+    // Block 4 DISCOUNT
+
+    $wp_customize->add_section(
+        'true_block_4_section',
+        array(
+            'title'       => 'DISCOUNT OF 20%',
+            'priority'    => 4,
+            'description' => 'Here you can customize the DISCOUNT block',
+            'panel'       => 'true_panel'
+        )
+    );
+
+    $wp_customize->add_setting(
+        'jw_block-discount_header_2',
+        array(
+            'default'    =>  'DISCOUNT OF <span>20%</span>',
+            'transport'  =>  'postMessage'
+        )
+    );
+
+    $wp_customize->add_control(
+        'jw_block-discount_header_2',
+        array(
+            'section'   => 'true_block_4_section',
+            'label'     => 'Header 1',
+            'type'      => 'text'
+        )
+    );
+
+    $wp_customize->add_setting(
+        'jw_block-discount_header_3',
+        array(
+            'default'    =>  'ON ALL GOLD RINGS',
+            'transport'  =>  'postMessage'
+        )
+    );
+
+    $wp_customize->add_control(
+        'jw_block-discount_header_3',
+        array(
+            'section'   => 'true_block_4_section',
+            'label'     => 'Header 2',
+            'type'      => 'text'
+        )
+    );
+
+    $wp_customize->add_setting(
+        'jw_block-discount_header_4',
+        array(
+            'default'    =>  'She exposed painted fifteen are noisier mistake led waiting. Surprise not wandered speedily husbands although yet end. Are court tiled cease young built fat one man taken. We highest ye friends is exposed equally in. Ignorant had too.',
+            'transport'  =>  'postMessage'
+        )
+    );
+
+    $wp_customize->add_control(
+        'jw_block-discount_header_4',
+        array(
+            'section'   => 'true_block_4_section',
+            'label'     => 'Text',
+            'type'      => 'text'
+        )
+    );
+
+    $wp_customize->add_setting(
+        'jw_block-discount_list',
+        array(
+            'default'    =>  '<li>His six are entreaties instrument acceptance unsatiable.</li><li>Iscovery commanded fat mrs remaining son she principle.</li><li>Settling you has separate supplied bed concluded resembled.</li><li>Cause dried no solid no an small so still widen ten weather.</li>',
+            'transport'  =>  'postMessage'
+        )
+    );
+
+    $wp_customize->add_control(
+        'jw_block-discount_list',
+        array(
+            'section'   => 'true_block_4_section',
+            'label'     => 'List',
+            'type'      => 'text'
+        )
+    );
+
+    $wp_customize->add_setting(
+        'jw_block-discount_Button_link',
+        array(
+            'default'    =>  '#',
+            'transport'  =>  'postMessage'
+        )
+    );
+
+    $wp_customize->add_control(
+        'jw_block-discount_Button_link',
+        array(
+            'section'   => 'true_block_4_section',
+            'label'     => 'Button 1 Link',
+            'type'      => 'text'
+        )
+    );
+
+    $wp_customize->add_setting(
+        'jw_block-discount_Button',
+        array(
+            'default'    =>  'Go to shop',
+            'transport'  =>  'postMessage'
+        )
+    );
+
+    $wp_customize->add_control(
+        'jw_block-discount_Button',
+        array(
+            'section'   => 'true_block_4_section',
+            'label'     => 'Button 1 Text',
+            'type'      => 'text'
+        )
+    );
+
+    $wp_customize->add_setting(
+        'jw_block-discount_2_Button_link',
+        array(
+            'default'    =>  '#',
+            'transport'  =>  'postMessage'
+        )
+    );
+
+    $wp_customize->add_control(
+        'jw_block-discount_2_Button_link',
+        array(
+            'section'   => 'true_block_4_section',
+            'label'     => 'Button 2 Link',
+            'type'      => 'text'
+        )
+    );
+
+    $wp_customize->add_setting(
+        'jw_block-discount_2_Button',
+        array(
+            'default'    =>  'VIEW MORE',
+            'transport'  =>  'postMessage'
+        )
+    );
+
+    $wp_customize->add_control(
+        'jw_block-discount_2_Button',
+        array(
+            'section'   => 'true_block_4_section',
+            'label'     => 'Button 2 Text',
+            'type'      => 'text'
+        )
+    );
 
     // Footer
 
@@ -537,7 +799,7 @@ function true_customizer_init( $wp_customize ) {
         'true_footer_section',
         array(
             'title'       => 'Footer',
-            'priority'    => 5,
+            'priority'    => 8,
             'description' => 'Here you can customize the footer of your website.',
             'panel'       => 'true_panel'
         )

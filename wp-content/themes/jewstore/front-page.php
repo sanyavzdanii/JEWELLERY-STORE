@@ -110,7 +110,7 @@
                     } else {
                         echo $button10Link;
                     } ?>"><?= $button10Text ?></a>
-                <?php } ?>
+                <?php } else { echo '<a class="btn btn--grey" href="#">SHOP NOW</a>'; } ?>
                 <?php
                     $button20Link = esc_html(get_theme_mod( 'jw_block_2_Button_link' ));
                     $button20Text = esc_html(get_theme_mod( 'jw_block_2_Button' ));
@@ -122,7 +122,7 @@
                     } else {
                         echo $button20Link;
                     } ?>"><?= $button20Text ?></a>
-                <?php } ?>
+                <?php } else { echo '<a class="btn btn--transparent-2" href="#">VIEW MORE</a>'; } ?>
             </div>
 	    </div>
 	</section>
@@ -194,7 +194,7 @@
                             <div class="banner-text__shop-now">
                                 shop now
                             </div>
-                            <a href="#" class="fake-link"></a>
+                            <a href="<?php if(get_post_meta( get_the_ID(), 'jw_block_2_banner_link' )[0] != '') { echo get_post_meta( get_the_ID(), 'jw_block_2_banner_link' )[0]; } else { echo '#'; } ?>" class="fake-link"></a>
                         </div>
                     </div>
                 </div>
@@ -262,7 +262,7 @@
                             <div class="banner-text__shop-now white">
                                 shop now
                             </div>
-                            <a href="#" class="fake-link"></a>
+                            <a href="<?php if(get_post_meta( get_the_ID(), 'jw_block_2_banner_2_link' )[0] != '') { echo get_post_meta( get_the_ID(), 'jw_block_2_banner_2_link' )[0]; } else { echo '#'; } ?>" class="fake-link"></a>
                         </div>
                     </div>
                 </div>
@@ -291,4 +291,139 @@
             </div>
         </div>
 	</section>
+	<section class="special-offer container d-flex align-items-center">
+        <div class="special-offer__left position-relative d-flex">
+            <?php
+                $imgAlt = get_post_meta( get_the_ID(), 'special_offer_img_alt' )[0];
+                $imgSrc = get_post_meta( get_the_ID(), 'special_offer_img' )[0];
+
+                if( $imgSrc != '' ) {
+                    echo '<img src="' . $imgSrc . '" alt="' . $imgAlt . '" width="581px" height="327px" />';
+                } else {
+                    echo '<img src="' . get_stylesheet_directory_uri() . '/assets/video.png" alt="' . $imgAlt . '" width="581px" height="327px">';
+                }
+            ?>
+            <a class="fake-link" href="<?php if(get_post_meta( get_the_ID(), 'jw_block_3_video_link' )[0] != '') { echo get_post_meta( get_the_ID(), 'jw_block_3_video_link' )[0]; } else { echo 'https://youtu.be/KotxCkZBQpQ'; } ?>" target="_blank"></a>
+        </div>
+        <div class="special-offer__right">
+             <div class="zhadan-alex-testovoye">
+                <?php
+                    if( esc_html(get_theme_mod( 'jw_special_offer_header_1' )) != '' ) {
+                        echo esc_html(get_theme_mod( 'jw_special_offer_header_1' ));
+                    } else {
+                        echo 'Special offer';
+                    }
+                ?>
+             </div>
+             <div class="zhadan-alex-testovoye-1">
+                <?php
+                    if( esc_html(get_theme_mod( 'jw_special_offer_header_2' )) != '' ) {
+                        echo esc_html(get_theme_mod( 'jw_special_offer_header_2' ));
+                    } else {
+                        echo 'JEWELLERY BOX';
+                    }
+                ?>
+             </div>
+             <div class="zhadan-alex-testovoye-1 zhadan-alex-testovoye-1--small">
+                <?php
+                    if( esc_html(get_theme_mod( 'jw_special_offer_header_3' )) != '' ) {
+                        echo esc_html(get_theme_mod( 'jw_special_offer_header_3' ));
+                    } else {
+                        echo 'ALL IN ONE BOX';
+                    }
+                ?>
+             </div>
+             <?php
+                 $button10Link = esc_html(get_theme_mod( 'jw_special_offer_Button_link' ));
+                 $button10Text = esc_html(get_theme_mod( 'jw_special_offer_Button' ));
+
+                 if( $button10Text != '' ) {
+             ?>
+                 <a class="btn btn--grey" href="<?php if($button10Link == '') {
+                     echo '#';
+                 } else {
+                     echo $button10Link;
+                 } ?>"><?= $button10Text ?></a>
+             <?php } else { echo '<a class="btn btn--grey" href="#">Check Now</a>'; } ?>
+        </div>
+    </section>
+
+    <section class="block-discount container d-flex">
+        <div class="block-discount__left">
+            <div class="zhadan-alex-testovoye-1">
+                <?php
+                    if( esc_html(get_theme_mod( 'jw_block-discount_header_2' )) != '' ) {
+                        echo esc_html(get_theme_mod( 'jw_block-discount_header_2' ));
+                    } else {
+                        echo 'DISCOUNT OF <span>20%</span>';
+                    }
+                ?>
+            </div>
+            <div class="zhadan-alex-testovoye-1 zhadan-alex-testovoye-1--small">
+                <?php
+                    if( esc_html(get_theme_mod( 'jw_block-discount_header_3' )) != '' ) {
+                        echo esc_html(get_theme_mod( 'jw_block-discount_header_3' ));
+                    } else {
+                        echo 'ON ALL GOLD RINGS';
+                    }
+                ?>
+            </div>
+            <div class="zhadan-alex-testovoye-2 mb-15">
+                <?php
+                    if( esc_html(get_theme_mod( 'jw_block-discount_header_4' )) != '' ) {
+                        echo esc_html(get_theme_mod( 'jw_block-discount_header_4' ));
+                    } else {
+                        echo 'She exposed painted fifteen are noisier mistake led waiting. Surprise not wandered speedily husbands although yet end. Are court tiled cease young built fat one man taken. We highest ye friends is exposed equally in. Ignorant had too.';
+                    }
+                 ?>
+            </div>
+            <div class="zhadan-alex-testovoye-2">
+                <?php
+                    if( esc_html(get_theme_mod( 'jw_block-discount_list' )) != '' ) {
+                        echo '<ul>' . esc_html(get_theme_mod( 'jw_block-discount_list' )) . '</ul>';
+                    } else {
+                        echo '<ul><li>His six are entreaties instrument acceptance unsatiable.</li><li>Iscovery commanded fat mrs remaining son she principle.</li><li>Settling you has separate supplied bed concluded resembled.</li><li>Cause dried no solid no an small so still widen ten weather.</li></ul>';
+                    }
+                 ?>
+            </div>
+            <div>
+                <?php
+                    $button10Link = esc_html(get_theme_mod( 'jw_block-discount_Button_link' ));
+                    $button10Text = esc_html(get_theme_mod( 'jw_block-discount_Button' ));
+
+                    if( $button10Text != '' ) {
+                ?>
+                    <a class="btn btn--grey" href="<?php if($button10Link == '') {
+                        echo '#';
+                    } else {
+                        echo $button10Link;
+                    } ?>"><?= $button10Text ?></a>
+                <?php } else { echo '<a class="btn btn--grey" href="#">Go to shop</a>'; } ?>
+                <?php
+                    $button20Link = esc_html(get_theme_mod( 'jw_block-discount_2_Button_link' ));
+                    $button20Text = esc_html(get_theme_mod( 'jw_block-discount_2_Button' ));
+
+                    if( $button20Text != '' ) {
+                ?>
+                    <a class="btn btn--transparent-2" href="<?php if($button20Link == '') {
+                        echo '#';
+                    } else {
+                        echo $button20Link;
+                    } ?>"><?= $button20Text ?></a>
+                <?php } else { echo '<a class="btn btn--transparent-2" href="#">VIEW MORE</a>'; } ?>
+            </div>
+        </div>
+        <div class="block-discount__right">
+            <?php
+                $imgAlt = get_post_meta( get_the_ID(), 'block-discount_img_alt' )[0];
+                $imgSrc = get_post_meta( get_the_ID(), 'block-discount_img' )[0];
+
+                if( $imgSrc != '' ) {
+                    echo '<img src="' . $imgSrc . '" alt="' . $imgAlt . '" width="585px" height="520px" />';
+                } else {
+                    echo '<img src="' . get_stylesheet_directory_uri() . '/assets/discount.png" alt="' . $imgAlt . '" width="585px" height="520px">';
+                }
+            ?>
+        </div>
+    </section>
 <?php get_footer(); ?>

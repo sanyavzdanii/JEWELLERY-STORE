@@ -1,0 +1,49 @@
+.block-discount {
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 50px;
+
+  &__left, &__right {
+    width: 100%;
+  }
+
+  &__left {
+    @media (max-width: $before-xl) {
+      div:last-of-type {
+        text-align: center;
+      }
+    }
+
+    @media (min-width: $xl) {
+      max-width: 570px;
+      margin-right: 20px;
+    }
+  }
+
+  &__right {
+    @media (max-width: $before-xl) {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 30px;
+
+      img {
+        width: 60%;
+        height: auto;
+      }
+    }
+
+    @media (min-width: $xl) {
+      max-width: 585px;
+    }
+  }
+
+  @media (max-width: $before-xl) {
+    flex-direction: column-reverse;
+  }
+
+  @media (min-width: $xl) {
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    margin-bottom: 100px;
+  }
+}
