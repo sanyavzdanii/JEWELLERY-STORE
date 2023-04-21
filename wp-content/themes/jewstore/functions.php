@@ -645,6 +645,40 @@ function true_customizer_init( $wp_customize ) {
         )
     );
 
+    $wp_customize->add_setting(
+        'jw_special_offer_Button_link',
+        array(
+            'default'    =>  '#',
+            'transport'  =>  'postMessage'
+        )
+    );
+
+    $wp_customize->add_control(
+        'jw_special_offer_Button_link',
+        array(
+            'section'   => 'true_block_3_section',
+            'label'     => 'Button Link',
+            'type'      => 'text'
+        )
+    );
+
+    $wp_customize->add_setting(
+        'jw_special_offer_Button',
+        array(
+            'default'    =>  'Check Now',
+            'transport'  =>  'postMessage'
+        )
+    );
+
+    $wp_customize->add_control(
+        'jw_special_offer_Button',
+        array(
+            'section'   => 'true_block_3_section',
+            'label'     => 'Button Text',
+            'type'      => 'text'
+        )
+    );
+
     // Block 4 DISCOUNT
 
     $wp_customize->add_section(
@@ -789,6 +823,40 @@ function true_customizer_init( $wp_customize ) {
         array(
             'section'   => 'true_block_4_section',
             'label'     => 'Button 2 Text',
+            'type'      => 'text'
+        )
+    );
+
+    $wp_customize->add_setting(
+        'block-discount_img_alt',
+        array(
+            'default'    =>  'Type alt here',
+            'transport'  =>  'postMessage'
+        )
+    );
+
+    $wp_customize->add_control(
+        'block-discount_img_alt',
+        array(
+            'section'   => 'true_block_4_section',
+            'label'     => 'Alt of image',
+            'type'      => 'text'
+        )
+    );
+
+    $wp_customize->add_setting(
+        'block-discount_img',
+        array(
+            'default'    =>  '/assets/discount.png',
+            'transport'  =>  'postMessage'
+        )
+    );
+
+    $wp_customize->add_control(
+        'block-discount_img',
+        array(
+            'section'   => 'true_block_4_section',
+            'label'     => 'Link to image',
             'type'      => 'text'
         )
     );

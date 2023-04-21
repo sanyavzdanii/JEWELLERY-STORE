@@ -154,6 +154,8 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
   line-height: 25px;
   color: #C3935B;
   margin-bottom: 10px; }
+  .zhadan-alex-testovoye.black {
+    color: #242424; }
   @media (max-width: 1199px) {
     .zhadan-alex-testovoye {
       font-size: 19px;
@@ -215,6 +217,29 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
     .zhadan-alex-testovoye-3 {
       font-size: 24px;
       line-height: 42px; } }
+
+.zhadan-alex-testovoye-4 {
+  font-family: "Marcellus", Arial;
+  font-size: 54px;
+  line-height: 65px;
+  color: #242424;
+  margin-bottom: 10px; }
+  @media (max-width: 1199px) {
+    .zhadan-alex-testovoye-4 {
+      font-size: 24px;
+      line-height: 42px; } }
+
+.zhadan-alex-testovoye-5 {
+  font-family: "Marcellus", Arial;
+  font-size: 18px;
+  line-height: 25px;
+  color: #242424;
+  margin-bottom: 10px;
+  text-transform: uppercase; }
+  @media (max-width: 1199px) {
+    .zhadan-alex-testovoye-5 {
+      font-size: 14px;
+      line-height: 22px; } }
 
 /* Slider */
 .slick-slider {

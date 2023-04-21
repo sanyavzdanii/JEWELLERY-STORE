@@ -426,4 +426,62 @@
             ?>
         </div>
     </section>
+
+    <section class="block-all container d-flex">
+        <div class="block-all__left">
+            <div class="zhadan-alex-testovoye black">
+                <?php
+                    if( esc_html(get_theme_mod( 'jw_special_offer_header_1' )) != '' ) {
+                        echo esc_html(get_theme_mod( 'jw_special_offer_header_1' ));
+                    } else {
+                        echo 'Special offer';
+                    }
+                ?>
+            </div>
+            <div class="zhadan-alex-testovoye-4">
+                <?php
+                    if( esc_html(get_theme_mod( 'jw_block-all_header_3' )) != '' ) {
+                        echo esc_html(get_theme_mod( 'jw_block-all_header_3' ));
+                    } else {
+                        echo 'ON ALL GOLD RINGS';
+                    }
+                ?>
+            </div>
+            <div class="zhadan-alex-testovoye-5 mb-30">
+                <?php
+                    if( esc_html(get_theme_mod( 'jw_block-all_header_4' )) != '' ) {
+                        echo esc_html(get_theme_mod( 'jw_block-all_header_4' ));
+                    } else {
+                        echo 'She exposed painted fifteen are noisier mistake led waiting.';
+                    }
+                 ?>
+            </div>
+            <div>
+                <?php
+                    $button10Link = esc_html(get_theme_mod( 'jw_block-all_Button_link' ));
+                    $button10Text = esc_html(get_theme_mod( 'jw_block-all_Button' ));
+
+                    if( $button10Text != '' ) {
+                ?>
+                    <a class="btn btn--grey" href="<?php if($button10Link == '') {
+                        echo '#';
+                    } else {
+                        echo $button10Link;
+                    } ?>"><?= $button10Text ?></a>
+                <?php } else { echo '<a class="btn btn--grey" href="#">Go to shop</a>'; } ?>
+            </div>
+        </div>
+        <div class="block-all__right">
+            <?php
+                $imgAlt = get_post_meta( get_the_ID(), 'block-all_img_alt' )[0];
+                $imgSrc = get_post_meta( get_the_ID(), 'block-all_img' )[0];
+
+                if( $imgSrc != '' ) {
+                    echo '<img src="' . $imgSrc . '" alt="' . $imgAlt . '" width="585px" height="520px" />';
+                } else {
+                    echo '<img src="' . get_stylesheet_directory_uri() . '/assets/discount.png" alt="' . $imgAlt . '" width="585px" height="520px">';
+                }
+            ?>
+        </div>
+    </section>
 <?php get_footer(); ?>

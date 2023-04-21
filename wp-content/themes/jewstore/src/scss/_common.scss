@@ -176,6 +176,10 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
   color: $gold;
   margin-bottom: 10px;
 
+  &.black {
+    color: $dark;
+  }
+
   @media (max-width: $before-xl) {
     font-size: 19px;
     line-height: 23px;
@@ -254,5 +258,32 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
   @media (max-width: $before-xl) {
     font-size: 24px;
     line-height: 42px;
+  }
+}
+
+.zhadan-alex-testovoye-4 {
+  font-family: $second-font;
+  font-size: 54px;
+  line-height: 65px;
+  color: $dark;
+  margin-bottom: 10px;
+
+  @media (max-width: $before-xl) {
+    font-size: 24px;
+    line-height: 42px;
+  }
+}
+
+.zhadan-alex-testovoye-5 {
+  font-family: $second-font;
+  font-size: 18px;
+  line-height: 25px;
+  color: $dark;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+
+  @media (max-width: $before-xl) {
+    font-size: 14px;
+    line-height: 22px;
   }
 }
