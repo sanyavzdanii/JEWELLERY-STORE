@@ -23,7 +23,8 @@ body {
   font-weight: 400;
   font-size: 14px;
   line-height: 25px;
-  color: #777777; }
+  color: #777777;
+  background-color: #F4F4F4; }
 
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
   font-family: "Marcellus", Arial;
@@ -236,6 +237,8 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
   color: #242424;
   margin-bottom: 10px;
   text-transform: uppercase; }
+  .zhadan-alex-testovoye-5.black {
+    color: #000000; }
   @media (max-width: 1199px) {
     .zhadan-alex-testovoye-5 {
       font-size: 14px;
@@ -819,6 +822,59 @@ body {
       flex-direction: column-reverse; } }
   @media (min-width: 1200px) {
     .block-discount {
+      flex-wrap: nowrap;
+      justify-content: space-between;
+      margin-bottom: 100px; } }
+
+.block-all {
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 50px; }
+  .block-all__left, .block-all__right {
+    width: 100%; }
+  .block-all__left {
+    justify-content: end; }
+    .block-all__left .zhadan-alex-testovoye-4 {
+      font-size: 54px;
+      line-height: 65px; }
+      @media (max-width: 1199px) {
+        .block-all__left .zhadan-alex-testovoye-4 {
+          font-size: 24px;
+          line-height: 42px; } }
+    .block-all__left .zhadan-alex-testovoye-5 {
+      margin-bottom: 30px; }
+    .block-all__left .block {
+      position: absolute;
+      top: 26px;
+      right: 0;
+      max-width: 295px; }
+    @media (max-width: 1199px) {
+      .block-all__left div:last-of-type {
+        text-align: center; } }
+    @media (min-width: 1200px) {
+      .block-all__left {
+        max-width: 569px;
+        margin-right: 45px; } }
+  .block-all__right .block {
+    width: 100%;
+    max-width: 255px; }
+    .block-all__right .block:first-of-type {
+      margin-right: 45px; }
+    .block-all__right .block .zhadan-alex-testovoye-5 {
+      margin-bottom: 20px; }
+  @media (max-width: 1199px) {
+    .block-all__right {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 30px; } }
+  @media (min-width: 1200px) {
+    .block-all__right {
+      max-width: 555px; } }
+  @media (max-width: 1199px) {
+    .block-all {
+      flex-direction: column-reverse; } }
+  @media (min-width: 1200px) {
+    .block-all {
       flex-wrap: nowrap;
       justify-content: space-between;
       margin-bottom: 100px; } }

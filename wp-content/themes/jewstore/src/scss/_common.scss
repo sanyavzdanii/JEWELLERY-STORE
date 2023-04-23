@@ -9,6 +9,7 @@ body {
   font-size: 14px;
   line-height: 25px;
   color: $dark-light;
+  background-color: $bg;
 }
 
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
@@ -281,6 +282,10 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
   color: $dark;
   margin-bottom: 10px;
   text-transform: uppercase;
+
+  &.black {
+    color: $black;
+  }
 
   @media (max-width: $before-xl) {
     font-size: 14px;
